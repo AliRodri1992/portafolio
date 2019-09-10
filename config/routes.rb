@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/contact', to: 'home#contact', as: 'contact'
+  get '/about', to: 'home#about', as: 'about'
+  get '/help', to: 'home#help', as: 'help'
+  get '/home', to: 'home#index', as: 'home'
+
+  root 'home#index'
 end
