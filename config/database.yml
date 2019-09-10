@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  host: localhost
+  port: 5432
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: portafolio_development
+  user: portafolio_user
+  password: portafolio_user
+
+test:
+  <<: *default
+  database: portafolio_test
+  user: portafolio_user
+  password: portafolio_user
+
+production:
+  <<: *default
+  database: portafolio_production
+  user: portafolio_user
+  password: portafolio_user
